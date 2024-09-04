@@ -1,5 +1,5 @@
 import AddTask from "./components/AddTask";
-import Task from "./Task";
+import TaskList from "./components/TaskList";
 import { tasks } from "./data/data";
 import { useState } from "react";
 
@@ -35,7 +35,7 @@ export default function App() {
           A new journey to use useState
         </h1>
         <AddTask onAddTask={handleAddTask} />
-        <Task tasks={taskList} onDelete={handleDeleteTask} />
+        <TaskList tasks={taskList} onDelete={handleDeleteTask} onEdit={handleEditTask} />
       </div>
     </>
   );
